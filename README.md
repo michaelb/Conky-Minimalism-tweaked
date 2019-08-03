@@ -16,7 +16,7 @@ Credits to NoTranslation (NoTranslation/Conky-Minimalism) for doing 99% of the w
 
 Note: If Core temps are not displayed correctly, see line 264 in clocks.lua
 
-![alt text](http://persoservermichaelddns.net:3000/mika/Conky-Minimalism-tweaked/master/example.png)
+![alt text](http://persoservermichael.ddns.net:3000/mika/Conky-Minimalism-tweaked/master/example.png)
 
 
 
