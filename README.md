@@ -1,7 +1,7 @@
 # Conky-Minimalism-tweaked
 A Simple Conky config tweaked by myself, a git repo just to save it tbh
 
-Credits to NoTranslation (NoTranslation/Conky-Minimalism) for doing 99% of the work, and let's not forget the others devs you can find in the commit history
+Credits to NoTranslation (NoTranslation/Conky-Minimalism) from who I got 99% of the code, and let's not forget the others devs you can find in the commit history
 
 Basically tweaked color, changed update frequency (at first a clock updating only every 5 sec is strange) for a much better ressource consumption, added numbers to CPU temp bars and added freqs value.
 
