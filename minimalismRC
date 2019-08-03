@@ -1,90 +1,98 @@
 conky.config = {
-  -- -- Conky settings -- #
-	    background = false,
-	    update_interval = 1,
+    -- -- Conky settings -- #
+        background = false,
+    update_interval = 5 ,
 
-	    cpu_avg_samples = 1,
-	    net_avg_samples = 2,
+    cpu_avg_samples = 1,
+    net_avg_samples = 2,
 
-	    override_utf8_locale = true,
+    override_utf8_locale = true,
 
-	    double_buffer = true,
-	    no_buffers = true,
+    double_buffer = true,
+    no_buffers = true,
 
-      text_buffer_size = 32768,
-      imlib_cache_size = 0,
+    text_buffer_size = 32768,
+    imlib_cache_size = 0,
 
-  -- -- Window specifications -- #
-	    own_window = true,
-      own_window_type = 'dock',
-      own_window_argb_visual = true,
-      own_window_argb_value = 0,
-	    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
-      own_window_title = 'clicky',
+    -- -- Window specifications -- #
+        own_window = true,
+    own_window_type = 'dock',
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_title = 'clicky',
 
-	    border_inner_margin = 50,
-	    border_outer_margin = 0,
-
-	-- Conky on second monitor
-	    xinerama_head = 2,
+    border_inner_margin = 50,
+    border_outer_margin = 0,
 
 
-  --minimum_size 1100 700
-	    maximum_width = 700,
 
-	    alignment = 'top_right',
-	    gap_x = 0,
-	    gap_y = 90,
+    --minimum_size 1100 700
+        maximum_width = 700,
 
-  -- -- Graphics settings -- #
-	    draw_shades = false,
-	    draw_outline = false,
-	    draw_borders = false,
-	    draw_graph_borders = false,
+    alignment = 'top_right',
+    gap_x = 0,
+    gap_y = 90,
 
-  -- -- Text settings -- #
-	    use_xft = true,
-	    font = 'Ubuntu Mono:size=10',
-	    xftalpha = 0.8,
-      --Ícones: ${font Conky Icons by Carelli:size=14}
+    -- -- Graphics settings -- #
+        draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = false,
 
-	    uppercase = false,
+    -- -- Text settings -- #
+        use_xft = true,
+    font = 'Ubuntu Mono:size=10',
+    xftalpha = 0.8,
+    --Ícones: ${font Conky Icons by Carelli:size=14}
 
-	    default_color = '#FFFFFF',
+    uppercase = false,
 
-      --own_window_transparent yes
-	    own_window_colour = '#000000',
-	    minimum_width = 400, minimum_height = 700,
+              default_color = '#FFFFFF',
 
-      --CORRECT THIS PATH
-      lua_load = '~/.conky/minimalism/clocks.lua',
-      lua_draw_hook_pre = 'clock_rings',
-      --lua_load = '~/.conky/minimalism/clicky.lua',
-      --lua_draw_hook_pre = 'main',
+              --own_window_transparent yes
+                  own_window_colour = '#000000',
+              minimum_width = 400, minimum_height = 700,
+
+              --CORRECT THIS PATH
+                  lua_load = '~/.conky/Conky-Minimalism/clocks.lua',
+              lua_draw_hook_pre = 'clock_rings',
+              --lua_load = '~/.conky/Conky-Minimalism/clicky.lua',
+              --lua_draw_hook_pre = 'main',
 };
 
 conky.text = [[
 
-  ${voffset -25}${offset 180}${font neuropol:size=20}${time %H:%M}${font}  ${font Nimbus Mono L:size=9}$uptime
-  ${voffset 14}${offset 178}${color #ad1a26}${font Roboto-Italic:size=12}${exec date +%B\ %Y | sed 's/^.\| [a-z]/\U&/g'}
-  ##Replace 'enp3s0' with name of your network interface
-  ${offset 122}${voffset 75}${color #FFFFFF}${font Roboto-Medium:size=17}Dw  ${color #ad1a26}${downspeed enp3s0}
-  ##Replace 'enp3s0' with name of your network interface
-  ${offset 118}${voffset 10}${color #FFFFFF}Up ${offset 10}${color #ad1a26}${upspeed enp3s0}
-  ##Replace 'enp3s0' with name of your network interface
-  ${offset 120}${voffset 5}${font Roboto-Regularsize=12}${color #FFFFFF}TDown   ${color #00695c}${totaldown enp3s0}
-  #${offset 90}${voffset 30}${font Roboto-Regularsize=12}${color #FFFFFF}Song:${offset 21}${color #af1616}${scroll 17 ${execi 2 ~/.conky/minimalism/cmus-conky}}
-  ${offset 68}${voffset 120}${font Roboto-Regular:size=15}${color #FFFFFF}CPU
-  ${offset 188}${voffset 35}${font Roboto-Regular:size=8}Core 0
-  ${offset 234}${voffset -15}Core 1
-  ${offset 274}${voffset -15}Core 2
-  ${offset 314}${voffset -15}Core 3
+    ${voffset -25}${offset 180}${font neuropol:size=20}${time %H:%M}${font}  ${font Nimbus Mono L:size=9}$uptime
+    ${voffset 14}${offset 178}${color #ffffff}${font Roboto-Italic:size=12}${exec date +%B\ %Y | sed 's/^.\| [a-z]/\U&/g'}
+##Replace 'enp3s0' with name of your network interface
+    ${offset 122}${voffset 75}${color #FFFFFF}${font Roboto-Medium:size=17}Dw  ${color #ffffff}${downspeed wlp5s0}
+##Replace 'enp3s0' with name of your network interface
+    ${offset 118}${voffset 10}${color #FFFFFF}Up ${offset 10}${color #ffffff}${upspeed wlp5s0}
+##Replace 'enp3s0' with name of your network interface
+    ${offset 120}${voffset 5}${font Roboto-Regularsize=12}${color #FFFFFF}TDown   ${color #ffffff}${totaldown wlp5s0}
+#${offset 90}${voffset 30}${font Roboto-Regularsize=12}${color #FFFFFF}Song:${offset 21}${color #af1616}${scroll 17 ${execi 2 ~/.conky/Conky-Minimalism/cmus-conky}}
+    ${offset 68}${voffset 125}${font Roboto-Regular:size=14}${color #FFFFFF}CPU
+    ${offset 178}${voffset 35}${font Roboto-Regular:size=8}Core 0
+    ${offset 230}${voffset -15}Core 1
 
-  ${offset 100}${voffset 3}${font Roboto-Regular:size=11}${fs_used /} / ${fs_size /}
-  ${offset 90} $mem / $memmax
-  ${offset 175}${color #ad1a26}[$memperc%]
-  ${offset 205}${voffset 2}${color #ffffff}${font Roboto-Bold:size=14}MEM
-  ##CORRECT THIS PATH
-  ${image ~/.conky/minimalism/Archlinux-icon.png -p 280,130 -s 110x110}
+    ${offset 100} ${font Roboto-Regular:size=11}$mem / $memmax
+    ${offset 100}${voffset 3}${font Roboto-Regular:size=11}${fs_used /} / ${fs_size /}
+    ${offset 175}${color #ffffff}[$memperc%]
+    ${offset 195}${voffset 2}${color #ffffff}${font Roboto-Bold:size=14}MEM
 
-]];
+
+##CORRECT THIS PATH
+    ${image ~/.conky/Conky-Minimalism/Archlinux-icon.png -p 280,130 -s 110x110}
+
+    ${font Roboto-Regular:size=12}
+    ${offset 180}${voffset -375}${font Roboto-Regular:size=9}${exec sensors | grep "Core 0" | cut -d '+' -f 2 | cut -d '(' -f 1 }${exec sensors | grep "Core 1" | cut -d '+' -f 2 | cut -d '(' -f 1 }
+
+    ${font Roboto-Regular:size=13}
+    ${offset 270}${voffset -10}\#0: ${exec cat /proc/cpuinfo | grep MHz | head -n 1| cut -d ':' -f 2 | cut -d '.' -f 1 } MHz
+    ${offset 270}${voffset 7}\#1: ${exec cat /proc/cpuinfo | grep MHz |tail -n 2 | head -n 1| cut -d ':' -f 2 | cut -d '.' -f 1 } MHz
+
+
+    ${offset 20}${voffset -284}${color #ffffff}${font Roboto-Bold:size=14}NET
+
+    ]];

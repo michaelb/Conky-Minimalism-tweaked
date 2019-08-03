@@ -2,8 +2,7 @@
 
 
 
-sleep 20
 #(CORRECT WITH YOUR PATH!!)
-conky -c ~/.conky/minimalism/MangoRC &
+nice -n 19 conky -d -c ~/.conky/Conky-Minimalism/minimalismRC &
 
 exit
