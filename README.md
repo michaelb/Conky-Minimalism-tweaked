@@ -22,8 +22,9 @@ If you want a simple conky working out-of-the box with your 16-cores threadrippe
 2. Change the paths in minimalismRC & startup.sh
 3. Run startup.sh
 
-Note: If Core temps are not displayed correctly, see line 264 in clocks.lua
-you may have to specify which battery index you have (for me BAT1), replace all BAT1 by BAT0 or the appropriate in minimalismRC and clocks.lua
+Note:
+* If Core temps are not displayed correctly, see line 264 in clocks.lua
+* you may have to specify which battery index you have (for me BAT1), replace all BAT1 by BAT0 or the appropriate in minimalismRC and clocks.lua
 
 For CPU freq, make sure /proc/cpuinfo contains the relevant data as I am only reading it
 
