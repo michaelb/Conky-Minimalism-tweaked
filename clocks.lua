@@ -261,7 +261,7 @@ end
 
 function DrawLine (cr,start_x,start_y,end_x,end_y,linewidth)
     -- set colour (r,g,b,alpha)
-    cairo_set_source_rgba(cr,1,1,1,0.8)
+    cairo_set_source_rgba(cr,1,1,1,0.6)
     cairo_move_to(cr,conky_window.width - start_x,start_y)
     cairo_rel_line_to(cr,-end_x,end_y)
     cairo_set_line_width(cr,linewidth)
