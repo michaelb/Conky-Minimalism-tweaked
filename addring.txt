@@ -1,4 +1,5 @@
 add entry to settings table to customise your rings.
+don't forget the {} brackets and the , !!!
 -- You can create more rings simply by adding more elements to settings_table.
 -- "name" is the type of stat to display; you can choose from 'cpu', 'memperc', 'fs_used_perc', 'battery_used_perc'.
 name='time',
