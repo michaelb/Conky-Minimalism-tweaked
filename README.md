@@ -11,7 +11,6 @@ Basically tweaked color, changed some things for a **much** better ressource con
 If you want a simple conky working out-of-the box with your 16-cores threadripper I'd suggest looking at the original repo
 
 
-
 **Requires:**
 * ttf-roboto  |  [AUR](https://www.archlinux.org/packages/community/any/ttf-roboto/)
 * Conky with lua support | [AUR](https://aur.archlinux.org/packages/conky-lua/)
