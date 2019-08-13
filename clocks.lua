@@ -153,7 +153,22 @@ settings_table = {
         thickness=7,
         start_angle=0,
         end_angle=270
+    },
+    {
+        name='battery_percent',
+        arg='BAT1',
+        max=100,
+        bg_colour=0xffffff,
+        bg_alpha=0.02,
+        fg_colour=0xffffff,
+        fg_alpha=0.6,
+        x=370, y=750,
+        radius=50,
+        thickness=7,
+        start_angle=0,
+        end_angle=360
     }
+
 }
 --set line colour
 
@@ -334,6 +349,9 @@ function conky_clock_rings()
     DrawLine(cr,348,318,0,26,4)
     --draw mem lines
     DrawLine(cr,0,585,144,0,4)
+    --draw bat lines
+    DrawLine(cr,0,750,80,0,4)
+
 
 
     draw_clock_hands(cr,clock_x,clock_y)

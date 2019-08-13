@@ -95,4 +95,7 @@ conky.text = [[
 
     ${offset 20}${voffset -284}${color #ffffff}${font Roboto-Bold:size=14}NET
 
+    ${offset 283}${voffset 462}${color #ffffff}${font Roboto-Bold:size=14}BAT
+
+
     ]];
