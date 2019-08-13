@@ -1,4 +1,5 @@
 # Conky-Minimalism-tweaked
+=========================
 A Simple Conky config tweaked by myself, a git repo just to save it tbh
 
 Credits to NoTranslation, repo at NoTranslation/Conky-Minimalism from where I got 99% of the code, and let's not forget the others devs you can find in the commit history.
