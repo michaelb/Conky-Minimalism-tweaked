@@ -76,24 +76,25 @@ conky.text = [[
     ${offset 178}${voffset 35}${font Roboto-Regular:size=8}Core 0
     ${offset 230}${voffset -15}Core 1
 
-    ${offset 100} ${font Roboto-Regular:size=11}$mem / $memmax
-    ${offset 100}${voffset 3}${font Roboto-Regular:size=11}${fs_used /} / ${fs_size /}
-    ${offset 175}${color #ffffff}[$memperc%]
-    ${offset 195}${voffset 2}${color #ffffff}${font Roboto-Bold:size=14}MEM
-
+    ${goto 193}${voffset 8} ${font Roboto-Regular:size=10}RAM: ${offset 2} $mem
+    ${offset 133}${voffset -3}${font Roboto-Regular:size=10}Root: ${offset 2} ${fs_free /}
+    ${offset 200}${voffset 25}${color #ffffff}${font Roboto-Bold:size=14}MEM
+    ${offset 125}${voffset -60}${font Roboto-Regular:size=10}Home:${fs_free /home/}
+    ${offset 325}${voffset -5}${font Roboto-Regular:size=16}${color #ffffff}$memperc%
+    ${offset 305}${voffset -5}${font Roboto-Regular:size=14}${color #ffffff}${diskio /dev/sdc}
 
 ##CORRECT THIS PATH
     ${image ~/.conky/Conky-Minimalism/Archlinux-icon.png -p 280,130 -s 110x110}
 
     ${font Roboto-Regular:size=12}
-    ${offset 180}${voffset -375}${font Roboto-Regular:size=9}${exec sensors | grep "Core 0" | cut -d '+' -f 2 | cut -d '(' -f 1 }${exec sensors | grep "Core 1" | cut -d '+' -f 2 | cut -d '(' -f 1 }
+    ${offset 180}${voffset -365}${font Roboto-Regular:size=9}${exec sensors | grep "Core 0" | cut -d '+' -f 2 | cut -d '(' -f 1 }${exec sensors | grep "Core 1" | cut -d '+' -f 2 | cut -d '(' -f 1 }
 
     ${font Roboto-Regular:size=13}
     ${offset 270}${voffset -10}\#0: ${exec cat /proc/cpuinfo | grep MHz | head -n 1| cut -d ':' -f 2 | cut -d '.' -f 1 } MHz
     ${offset 270}${voffset 7}\#1: ${exec cat /proc/cpuinfo | grep MHz |tail -n 2 | head -n 1| cut -d ':' -f 2 | cut -d '.' -f 1 } MHz
 
 
-    ${offset 20}${voffset -284}${color #ffffff}${font Roboto-Bold:size=14}NET
+    ${offset 20}${voffset -279}${color #ffffff}${font Roboto-Bold:size=14}NET
 
     ${offset 283}${voffset 462}${color #ffffff}${font Roboto-Bold:size=14}BAT
     ${offset 260}${voffset 50}${color #ffffff}${font Roboto-Bold:size=12} ${battery_time BAT1}

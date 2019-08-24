@@ -5,7 +5,7 @@ settings_table = {
         arg='%S',
         max=60,
         bg_colour=0xffffff,
-        bg_alpha=0.02,
+        bg_alpha=0.1,
         fg_colour=0xffffff,    --defualt 0x0778ec
         fg_alpha=0.6,
         x=160, y=82,
@@ -19,7 +19,7 @@ settings_table = {
         arg='%M.%S',
         max=60,
         bg_colour=0xffffff,
-        bg_alpha=0.02,
+        bg_alpha=0.06,
         fg_colour=0xffffff,    --defualt 0x0778ec
         fg_alpha=0.6,
         x=160, y=82,
@@ -33,7 +33,7 @@ settings_table = {
         arg='%I.%M',
         max=12,
         bg_colour=0xffffff,
-        bg_alpha=0.02,
+        bg_alpha=0.03,
         fg_colour=0xffffff,    --defualt 0x0778ec
         fg_alpha=0.6,
         x=160, y=82,
@@ -47,7 +47,7 @@ settings_table = {
         arg='wlp5s0',
         max=800,
         bg_colour=0xffffff,
-        bg_alpha=0.02,
+        bg_alpha=0.1,
         fg_colour=0xffffff,
         fg_alpha=0.6,
         x=104, y=238,
@@ -75,7 +75,7 @@ settings_table = {
         arg='cpu0',
         max=100,
         bg_colour=0xffffff,
-        bg_alpha=0.02,
+        bg_alpha=0.1,
         fg_colour=0xffffff,
         fg_alpha=0.6,
         x=155, y=420,
@@ -89,7 +89,7 @@ settings_table = {
         arg='cpu1',
         max=100,
         bg_colour=0xffffff,
-        bg_alpha=0.02,
+        bg_alpha=0.08,
         fg_colour=0xffffff,
         fg_alpha=0.6,
         x=155, y=420,
@@ -103,7 +103,7 @@ settings_table = {
         arg='cpu2',
         max=100,
         bg_colour=0xffffff,
-        bg_alpha=0.02,
+        bg_alpha=0.06,
         fg_colour=0xffffff,
         fg_alpha=0.6,
         x=155, y=420,
@@ -117,7 +117,7 @@ settings_table = {
         arg='cpu3',
         max=100,
         bg_colour=0xffffff,
-        bg_alpha=0.02,
+        bg_alpha=0.04,
         fg_colour=0xffffff,
         fg_alpha=0.6,
         x=155, y=420,
@@ -128,15 +128,29 @@ settings_table = {
     },
     {
         name='fs_used_perc',
-        arg='/',
+        arg='/home/',
         max=100,
         bg_colour=0xffffff,
         bg_alpha=0.02,
         fg_colour=0xffffff,
         fg_alpha=0.6,
         x=285, y=590,
-        radius=55,
-        thickness=18,
+        radius=42,
+        thickness=8,
+        start_angle=0,
+        end_angle=270
+    },
+    {
+        name='fs_used_perc',
+        arg='/',
+        max=100,
+        bg_colour=0xffffff,
+        bg_alpha=0.06,
+        fg_colour=0xffffff,
+        fg_alpha=0.6,
+        x=285, y=590,
+        radius=51,
+        thickness=8,
         start_angle=0,
         end_angle=270
     },
@@ -145,12 +159,12 @@ settings_table = {
         arg='/',
         max=100,
         bg_colour=0xffffff,
-        bg_alpha=0.02,
+        bg_alpha=0.1,
         fg_colour=0xffffff,
         fg_alpha=0.6,
         x=285, y=590,
-        radius=70,
-        thickness=7,
+        radius=65,
+        thickness=17,
         start_angle=0,
         end_angle=270
     },
@@ -271,7 +285,7 @@ end
 
 function DrawBars (cr,start_x,start_y,bar_width,bar_height,corenum,r,g,b)
     -- set colour (r,g,b,alpha)
-    cairo_set_source_rgba(cr,1,1,1,0,0.05)
+    cairo_set_source_rgba(cr,1,1,1,0.1,0.05)
     cairo_rectangle (cr,start_x,start_y,bar_width,-bar_height)
     cairo_fill(cr)
     cairo_set_source_rgba(cr,r,g,b,0.6)
