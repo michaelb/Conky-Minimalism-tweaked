@@ -2,7 +2,7 @@ add entry to settings table to customise your rings.
 don't forget the {} brackets and the , !!!
 -- You can create more rings simply by adding more elements to settings_table.
 -- "name" is the type of stat to display; you can choose from 'cpu', 'memperc', 'fs_used_perc', 'battery_used_perc'.
-name='time',
+name='time', https://debian-facile.org/utilisateurs:arpinux:tutos:conky-les-variables
     -- "arg" is the argument to the stat type, e.g. if in Conky you would write ${cpu cpu0}, 'cpu0' would be the argument. If you would not use an argument in the Conky variable, use ''.
     arg='%I.%M',
     -- "max" is the maximum value of the ring. If the Conky variable outputs a percentage, use 100.
