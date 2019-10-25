@@ -63,16 +63,18 @@ conky.config = {
 
 conky.text = [[
 
-    ${voffset -25}${offset 180}${font neuropol:size=20}${time %H:%M}${font}  ${font Nimbus Mono L:size=9}$uptime
-    ${voffset 14}${offset 178}${color #ffffff}${font Roboto-Italic:size=12}${exec date +%B\ %Y | sed 's/^.\| [a-z]/\U&/g'}
+    ${offset 230}${voffset 60}${font Roboto-Regular:size=12} $kernel
+    ${voffset -106}${offset 180}${font neuropol:size=20}${time %H:%M}${font}  ${font Nimbus Mono L:size=9}$uptime
+    ${voffset 14}${offset 178}${color #ffffff}${font Roboto-Italic:size=12}${exec date +%e\ %B\ %Y | sed 's/^.\| [a-z]/\U&/g'}
 ##Replace 'enp3s0' with name of your network interface
-    ${offset 122}${voffset 75}${color #FFFFFF}${font Roboto-Medium:size=17}Dw  ${color #ffffff}${downspeed wlp5s0}
+    ${offset 129}${voffset 75}${color #FFFFFF}${font Roboto-Medium:size=17}Dw  ${color #ffffff}${downspeed wlp5s0}
 ##Replace 'enp3s0' with name of your network interface
-    ${offset 118}${voffset 10}${color #FFFFFF}Up ${offset 10}${color #ffffff}${upspeed wlp5s0}
+    ${offset 122}${voffset 0}${color #FFFFFF}Up ${offset 10}${color #ffffff}${upspeed wlp5s0}
 ##Replace 'enp3s0' with name of your network interface
-    ${offset 120}${voffset 5}${font Roboto-Regularsize=12}${color #FFFFFF}TDown   ${color #ffffff}${totaldown wlp5s0}
+    ${offset 122}${voffset 0}${font Roboto-Regularsize=12}${color #FFFFFF}TDown   ${color #ffffff}${totaldown wlp5s0}
+    ${offset 130}${voffset 0}Ping: ${exec ping -c 1 google.fr |sed -n 2p | cut -d '=' -f 4}
 #${offset 90}${voffset 30}${font Roboto-Regularsize=12}${color #FFFFFF}Song:${offset 21}${color #af1616}${scroll 17 ${execi 2 ~/.conky/Conky-Minimalism/cmus-conky}}
-    ${offset 68}${voffset 125}${font Roboto-Regular:size=14}${color #FFFFFF}CPU
+    ${offset 68}${voffset 117}${font Roboto-Regular:size=14}${color #FFFFFF}CPU
     ${offset 178}${voffset 35}${font Roboto-Regular:size=8}Core 0
     ${offset 230}${voffset -15}Core 1
 
