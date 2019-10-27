@@ -5,9 +5,9 @@ settings_table = {
         arg='%S',
         max=60,
         bg_colour=0xffffff,
-        bg_alpha=0.1,
+        bg_alpha=0,
         fg_colour=0xffffff,    --defualt 0x0778ec
-        fg_alpha=0.6,
+        fg_alpha=0,
         x=160, y=82,
         radius=55,
         thickness=3,
@@ -199,7 +199,7 @@ clock_colour=0xffffff
 clock_alpha=0.6
 
 --Show the seconds hand ?
-show_seconds=true
+show_seconds=false
 
 require 'cairo'
 
@@ -349,7 +349,7 @@ function conky_clock_rings()
 
     --parse in arguments as so (cr,startx postion,starty postion, how much to move x, how much to move y)
     DrawLine(cr,0,0,343,0,8)
-    DrawLine(cr,343,0,0,25,4)
+    DrawLine(cr,343,0,0,33,4)
     DrawLine(cr,100,75,170,0,4)
 
     --draw network lines
