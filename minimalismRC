@@ -73,6 +73,7 @@ conky.text = [[
 ##Replace 'enp3s0' with name of your network interface
     ${offset 122}${voffset 0}${font Roboto-Regularsize=12}${color #FFFFFF}TDown   ${color #ffffff}${totaldown wlp5s0}
     ${offset 130}${voffset 0}Ping: ${exec ping -c 1 google.fr |sed -n 2p | cut -d '=' -f 4}
+    ${offset 130}Server: ${exec ping -c 1 $SERVER |sed -n 2p | cut -d '=' -f 4}${voffset -22}
 #${offset 90}${voffset 30}${font Roboto-Regularsize=12}${color #FFFFFF}Song:${offset 21}${color #af1616}${scroll 17 ${execi 2 ~/.conky/Conky-Minimalism/cmus-conky}}
     ${offset 68}${voffset 117}${font Roboto-Regular:size=14}${color #FFFFFF}CPU
     ${offset 178}${voffset 35}${font Roboto-Regular:size=8}Core 0
