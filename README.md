@@ -1,14 +1,13 @@
 # Conky-Minimalism-tweaked
-=========================
 A Simple Conky config tweaked by myself, a git repo just to save it tbh.
-
-Credits to NoTranslation, repo at NoTranslation/Conky-Minimalism from where I got 99% of the code, and let's not forget the others devs you can find in the commit history.
-The whole works use the rings\_lua framework
+The whole thing use the rings\_lua framework
 
 Basically tweaked color, changed some things for a **much** better ressource consumption, added numbers to CPU temp bars and added freqs value. A lot of these things are specific to my own hardware config, you'll have to tinker (probably).
 
+## why you would want it
+You like the original conky but would like more stuff onscreen
 
-If you want a simple conky working out-of-the box with your 16-cores threadripper I'd suggest looking at the original repo
+
 
 
 **Requires:**
@@ -20,6 +19,15 @@ If you want a simple conky working out-of-the box with your 16-cores threadrippe
 1. Extract the zip file
 2. Change the paths in minimalismRC & startup.sh
 3. Run startup.sh
+
+## contributors and credits
+It is basically a very simple fork of NoTranslation/Conky-Minimalism.
+Credits to them, their repo is where I got 99% of the code
+
+If you want a simple conky working out-of-the box with your 16+ cores CPU I'd suggest using the original repo
+
+
+
 
 Note:
 * If Core temps are not displayed correctly, see line 264 in clocks.lua
