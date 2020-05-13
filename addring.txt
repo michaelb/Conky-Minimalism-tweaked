@@ -3,25 +3,25 @@ don't forget the {} brackets and the , !!!
 -- You can create more rings simply by adding more elements to settings_table.
 -- "name" is the type of stat to display; you can choose from 'cpu', 'memperc', 'fs_used_perc', 'battery_used_perc'.
 name='time', https://debian-facile.org/utilisateurs:arpinux:tutos:conky-les-variables
-    -- "arg" is the argument to the stat type, e.g. if in Conky you would write ${cpu cpu0}, 'cpu0' would be the argument. If you would not use an argument in the Conky variable, use ''.
-    arg='%I.%M',
-    -- "max" is the maximum value of the ring. If the Conky variable outputs a percentage, use 100.
-    max=12,
-    -- "bg_colour" is the colour of the base ring.
-    bg_colour=0xffffff,
-    -- "bg_alpha" is the alpha value of the base ring.
-    bg_alpha=0.1,
-    -- "fg_colour" is the colour of the indicator part of the ring.
-    fg_colour=0xFF6600,
-    -- "fg_alpha" is the alpha value of the indicator part of the ring.
-    fg_alpha=0.2,
-    -- "x" and "y" are the x and y coordinates of the centre of the ring, relative to the top left corner of the Conky window.
-    x=100, y=150,
-    -- "radius" is the radius of the ring.
-    radius=50,
-    -- "thickness" is the thickness of the ring, centred around the radius.
-    thickness=5,
-    -- "start_angle" is the starting angle of the ring, in degrees, clockwise from top. Value can be either positive or negative.
-    start_angle=0,
-    -- "end_angle" is the ending angle of the ring, in degrees, clockwise from top. Value can be either positive or negative, but must be larger than start_angle.
-    end_angle=360
+-- "arg" is the argument to the stat type, e.g. if in Conky you would write ${cpu cpu0}, 'cpu0' would be the argument. If you would not use an argument in the Conky variable, use ''.
+arg='%I.%M',
+  -- "max" is the maximum value of the ring. If the Conky variable outputs a percentage, use 100.
+  max=12,
+  -- "bg_colour" is the colour of the base ring.
+  bg_colour=0xffffff,
+  -- "bg_alpha" is the alpha value of the base ring.
+  bg_alpha=0.1,
+  -- "fg_colour" is the colour of the indicator part of the ring.
+  fg_colour=0xFF6600,
+  -- "fg_alpha" is the alpha value of the indicator part of the ring.
+  fg_alpha=0.2,
+  -- "x" and "y" are the x and y coordinates of the centre of the ring, relative to the top left corner of the Conky window.
+  x=100, y=150,
+  -- "radius" is the radius of the ring.
+  radius=50,
+  -- "thickness" is the thickness of the ring, centred around the radius.
+  thickness=5,
+  -- "start_angle" is the starting angle of the ring, in degrees, clockwise from top. Value can be either positive or negative.
+  start_angle=0,
+  -- "end_angle" is the ending angle of the ring, in degrees, clockwise from top. Value can be either positive or negative, but must be larger than start_angle.
+  end_angle=360
