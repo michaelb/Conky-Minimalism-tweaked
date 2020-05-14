@@ -45,7 +45,7 @@ settings_table = {
   {
     name='downspeedf',
     arg='wlp5s0',
-    max=10000,
+    max=3000,
     bg_colour=0xffffff,
     bg_alpha=0.1,
     fg_colour=0xffffff,
@@ -59,7 +59,7 @@ settings_table = {
   {
     name='upspeedf',
     arg='wlp5s0',
-    max=10000,
+    max=3000,
     bg_colour=0xffffff,
     bg_alpha=0.02,
     fg_colour=0xffffff,
@@ -349,18 +349,18 @@ function conky_clock_rings()
   end
 
   --parse in arguments as so (cr,startx postion,starty postion, how much to move x, how much to move y)
-  DrawLine(cr,0,0,343,0,8)
+  DrawLine(cr,0,0,341,0,8)
   DrawLine(cr,343,0,0,33,4)
   DrawLine(cr,100,75,170,0,4)
 
   --draw network lines
   DrawLine(cr,398,155,0,23,4)
-  DrawLine(cr,0,155,400,0,4)
+  DrawLine(cr,0,153,400,0,4)
   --draw cpu temp bars
   DrawBars(cr,250,470,30,100,0,rgb_to_r_g_b(0xffffff))
   DrawBars(cr,290,470,30,100,1,rgb_to_r_g_b(0xffffff))
   --draw cpu temp lines
-  DrawLine(cr,0,320,348,0,4)
+  DrawLine(cr,0,320,346,0,4)
   DrawLine(cr,348,318,0,26,4)
   --draw mem lines
   DrawLine(cr,0,585,144,0,4)

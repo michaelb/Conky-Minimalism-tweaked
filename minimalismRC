@@ -4,7 +4,7 @@ conky.config = {
     update_interval = 2 ,
 
     cpu_avg_samples = 1,
-    net_avg_samples = 1,
+    net_avg_samples = 2,
 
     override_utf8_locale = true,
 
