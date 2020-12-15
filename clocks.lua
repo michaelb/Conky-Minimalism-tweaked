@@ -44,7 +44,7 @@ settings_table = {
   },
   {
     name='downspeedf',
-    arg='wlp5s0',
+    arg='wlo1',
     max=3000,
     bg_colour=0xffffff,
     bg_alpha=0.1,
@@ -58,7 +58,7 @@ settings_table = {
   },
   {
     name='upspeedf',
-    arg='wlp5s0',
+    arg='wlo1',
     max=3000,
     bg_colour=0xffffff,
     bg_alpha=0.02,
@@ -80,7 +80,7 @@ settings_table = {
     fg_alpha=0.6,
     x=155, y=420,
     radius=70,
-    thickness=10,
+    thickness=5,
     start_angle=140,
     end_angle=450
   },
@@ -93,8 +93,8 @@ settings_table = {
     fg_colour=0xffffff,
     fg_alpha=0.6,
     x=155, y=420,
-    radius=60,
-    thickness=9,
+    radius=65,
+    thickness=5,
     start_angle=140,
     end_angle=450
   },
@@ -103,12 +103,12 @@ settings_table = {
     arg='cpu2',
     max=100,
     bg_colour=0xffffff,
-    bg_alpha=0.06,
+    bg_alpha=0.08,
     fg_colour=0xffffff,
     fg_alpha=0.6,
     x=155, y=420,
-    radius=50,
-    thickness=9,
+    radius=60,
+    thickness=5,
     start_angle=140,
     end_angle=450
   },
@@ -117,29 +117,72 @@ settings_table = {
     arg='cpu3',
     max=100,
     bg_colour=0xffffff,
+    bg_alpha=0.07,
+    fg_colour=0xffffff,
+    fg_alpha=0.6,
+    x=155, y=420,
+    radius=55,
+    thickness=5,
+    start_angle=140,
+    end_angle=450
+  },
+  {
+    name='cpu',
+    arg='cpu4',
+    max=100,
+    bg_colour=0xffffff,
+    bg_alpha=0.06,
+    fg_colour=0xffffff,
+    fg_alpha=0.6,
+    x=155, y=420,
+    radius=50,
+    thickness=5,
+    start_angle=140,
+    end_angle=450
+  },
+  {
+    name='cpu',
+    arg='cpu5',
+    max=100,
+    bg_colour=0xffffff,
+    bg_alpha=0.05,
+    fg_colour=0xffffff,
+    fg_alpha=0.6,
+    x=155, y=420,
+    radius=45,
+    thickness=5,
+    start_angle=140,
+    end_angle=450
+  },
+  {
+    name='cpu',
+    arg='cpu6',
+    max=100,
+    bg_colour=0xffffff,
     bg_alpha=0.04,
     fg_colour=0xffffff,
     fg_alpha=0.6,
     x=155, y=420,
     radius=40,
-    thickness=9,
+    thickness=5,
     start_angle=140,
     end_angle=450
   },
   {
-    name='fs_used_perc',
-    arg='/home/',
+    name='cpu',
+    arg='cpu7',
     max=100,
     bg_colour=0xffffff,
-    bg_alpha=0.02,
+    bg_alpha=0.03,
     fg_colour=0xffffff,
     fg_alpha=0.6,
-    x=285, y=590,
-    radius=42,
-    thickness=8,
-    start_angle=0,
-    end_angle=270
+    x=155, y=420,
+    radius=35,
+    thickness=5,
+    start_angle=140,
+    end_angle=450
   },
+
   {
     name='fs_used_perc',
     arg='/',
@@ -170,7 +213,7 @@ settings_table = {
   },
   {
     name='battery_percent',
-    arg='BAT1',
+    arg='BAT0',
     max=100,
     bg_colour=0xffffff,
     bg_alpha=0.02,
@@ -289,15 +332,15 @@ function DrawBars (cr,start_x,start_y,bar_width,bar_height,corenum,r,g,b)
   cairo_rectangle (cr,start_x,start_y,bar_width,-bar_height)
   cairo_fill(cr)
   cairo_set_source_rgba(cr,r,g,b,0.6)
-  value = tonumber(conky_parse(string.format("${exec sensors | grep -o 'Core %s:        +[0-9].' | sed -r 's/%s:|[^0-9]//g'}",corenum,corenum)))
+  value = tonumber(conky_parse(string.format("${exec sensors | rg edge | sed -r 's/[^.0-9°]//g' ",corenum,corenum)))
   -- IF TEMP BARS DO NOT SHOW, try commenting the line above with '--' and uncommenting the line below by removing '--'. (Thanks to /u/IAmAFedora)
-  --value = tonumber(conky_parse(string.format("${exec sensors | grep -o 'Core %s:         +[0-9].' | sed -r 's/%s:|[^0-9]//g'}",corenum,corenum)))
+  -- value = tonumber(conky_parse(string.format("${exec sensors | grep -o 'Core %s:         +[0-9].' | sed -r 's/%s:|[^0-9]//g'}",corenum,corenum)))
   -- OR THESE ONES (remove '--[[' and ']]':
-  --[[local handle = io.popen("sensors")
-  local cpuTemp = handle:read("*a")
-  value = tonumber(cpuTemp:match("CPU Temperature:%s+\+(%d+)"))
-  handle:close()
-  ]]
+  -- local handle = io.popen("sensors")
+  -- local cpuTemp = handle:read("*a")
+  -- value = tonumber(cpuTemp:match("CPU Temperature:%s+\+(%d+)"))
+  -- handle:close()
+
   if value == nil then value = 0 end
   max_value=100
   scale=bar_height/max_value
@@ -357,8 +400,8 @@ function conky_clock_rings()
   DrawLine(cr,398,155,0,23,4)
   DrawLine(cr,0,153,400,0,4)
   --draw cpu temp bars
-  DrawBars(cr,250,470,30,100,0,rgb_to_r_g_b(0xffffff))
-  DrawBars(cr,290,470,30,100,1,rgb_to_r_g_b(0xffffff))
+  -- DrawBars(cr,250,470,30,100,0,rgb_to_r_g_b(0xffffff))
+  -- DrawBars(cr,260,470,50,100,1,rgb_to_r_g_b(0xffffff))
   --draw cpu temp lines
   DrawLine(cr,0,320,346,0,4)
   DrawLine(cr,348,318,0,26,4)
