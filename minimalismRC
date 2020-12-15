@@ -19,6 +19,7 @@ conky.config = {
     own_window_type = 'dock',
     own_window_argb_visual = true,
     own_window_argb_value = 0,
+    own_window_transparent = true,
     own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
     ---own_window_title = 'clicky',
 
@@ -73,15 +74,15 @@ conky.text = [[
     ${offset 129}${voffset 75}${color #FFFFFF}${font Roboto-Medium:size=17}Dw  ${color #ffffff}${downspeed wlp5s0}
     ${offset 122}${voffset 0}${color #FFFFFF}  Up ${offset 10}${color #ffffff}${upspeed wlp5s0}
 
-    ${offset 63}${voffset 117}${font Roboto-Regular:size=16}${color #FFFFFF}$cpu%
+    ${offset 63}${voffset 112}${font Roboto-Regular:size=16}${color #FFFFFF}$cpu%
 
 ##CORRECT THIS PATH
     ${image ~/.conky/Conky-Minimalism/Archlinux-icon.png -p 280,130 -s 110x110}
 
 
 
-    ${offset 260}${voffset -170}${execpi 10 cpupower frequency-info | grep "(ass" | cut -d : -f 2 | cut -d "(" -f 1}
-    ${offset 260}${voffset 380}${battery_time BAT1}
+    ${offset 260}${voffset -170}${execpi 120 cpupower frequency-info | grep "(ass" | cut -d : -f 2 | cut -d "(" -f 1}
+    ${offset 260}${voffset 380}${font Roboto-Regular:size:12}${battery_time BAT1}
 
 
 
