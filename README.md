@@ -15,6 +15,7 @@ You like the original conky but would like more stuff onscreen, while still keep
 - Conky with lua support | [AUR](https://aur.archlinux.org/packages/conky-lua/)
 - lm-sensors | [AUR](https://www.archlinux.org/packages/?name=lm_sensors)
 - cpupower | [AUR](https://www.archlinux.org/packages/community/x86_64/cpupower/)
+- ripgrep
 
 ## Installation
 

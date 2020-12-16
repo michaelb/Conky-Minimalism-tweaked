@@ -74,15 +74,16 @@ conky.text = [[
     ${offset 129}${voffset 75}${color #FFFFFF}${font Roboto-Medium:size=17}Dw  ${color #ffffff}${downspeed wlo1}
     ${offset 122}${voffset 0}${color #FFFFFF}  Up ${offset 10}${color #ffffff}${upspeed wlo1}
 
-    ${offset 63}${voffset 99}${font Roboto-Regular:size=16}${color #FFFFFF}$cpu%
+    ${offset 63}${voffset 110}${font Roboto-Regular:size=16}${color #FFFFFF}$cpu%
 
 ##CORRECT THIS PATH
     ${image ~/.conky/Conky-Minimalism/Archlinux-icon.png -p 280,130 -s 110x110}
 
 
 
-    ${offset 200}${voffset -190}${font Roboto-Medium:size=24}${execpi 120 cpupower frequency-info | grep "(ass" | cut -d : -f 2 | cut -d "(" -f 1}
-    ${offset 195}${font Roboto-Medium:size=24}${execpi 120 sensors | rg edge | sed -r 's/%s:|[^.0-9°]//g'}
+    ${offset 200}${voffset -245}${font Roboto-Medium:size=24}${execpi 120 cpupower frequency-info | grep "(ass" | cut -d : -f 2 | cut -d "(" -f 1}
+    ${offset 195}${font Roboto-Medium:size=10}CPU${font Roboto-Medium:size=24}${execpi 120 sensors | rg temp1|rg crit | cut --bytes=16-22}
+    ${offset 195}${font Roboto-Medium:size=10}GPU${font Roboto-Medium:size=24}${execpi 120 sensors | rg edge | sed -r 's/[^.0-9°]//g'}
     ${offset 240}${voffset 320}${font Roboto-Regular:size=12}${battery_time BAT0}
 
 
